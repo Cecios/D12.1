@@ -8,9 +8,12 @@ console.log(checkSum(25,25));
 
 // ESERCIZIO 2
 console.log("Esercizio 2:");
-const strRemove = function(){
-
+const strRemove = function(string,index){
+    let res = ''
+    res = string.replace(string.indexOf,'')
+    return res
 }
+console.log(strRemove('ciao',1));
 
 // ESERCIZIO 3
 console.log("Esercizio 3:");
@@ -76,3 +79,15 @@ const checkAngle = function(angle){
     }
 }
 console.log(checkAngle(180));
+// ESERCIZIO 8
+console.log("Esercizio 8");
+const acronym = function(frase){
+        const obj = frase.split(/\s+/);
+        let INIT = ''
+        for (let i = 0; i < obj.length; i++) {
+            INIT += obj[i].charAt(0)
+        }
+    return INIT.toLocaleUpperCase()
+}
+console.log(acronym('all cops are bastard'))
+
