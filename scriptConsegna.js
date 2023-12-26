@@ -9,8 +9,9 @@ console.log(checkSum(25,25));
 // ESERCIZIO 2
 console.log("Esercizio 2:");
 const strRemove = function(string,index){
-    let res = ''
-    res = string.replace(string.indexOf,'')
+    let primaParte = string.substring(0,index)
+    let parteSeconda = string.substring(index+1)
+    let res = primaParte + parteSeconda
     return res
 }
 console.log(strRemove('ciao',1));
@@ -79,6 +80,7 @@ const checkAngle = function(angle){
     }
 }
 console.log(checkAngle(180));
+
 // ESERCIZIO 8
 console.log("Esercizio 8");
 const acronym = function(frase){
@@ -91,3 +93,22 @@ const acronym = function(frase){
 }
 console.log(acronym('all cops are bastard'))
 
+//ESERCIZIO 1 EXTRA
+
+console.log("Esercizio 1 EXTRA");
+
+const countLetter = function(frase){
+    const occorrenze = {};
+    for (let i = 0; i < frase.length; i++) {
+        const carattere = frase[i].toLowerCase()
+        occorrenze[carattere] = (occorrenze[carattere] || 0) + 1;
+    }
+    let c = 0
+    for (let i = 0; i < occorrenze.length; i++) {
+        if (occorrenze[i] >= c) {
+            c = occorrenze[i]
+        }    
+    }
+    return occorrenze
+}
+console.log(countLetter('ciao mamma'));
