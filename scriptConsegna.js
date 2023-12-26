@@ -59,4 +59,20 @@ const checkArray = function(arr){
     }
 }
 console.log(checkArray(array_6));
-
+// ESERCIZIO 7
+console.log("Esercizio 7");
+const checkAngle = function(angle){
+    if (angle < 90) {
+        return "acuto"
+    }
+    else if (angle > 90 && angle < 180) {
+        return "ottuso"
+    }
+    else if (angle === 90) {
+        return "retto"
+    }
+    else if (angle === 180) {
+        return "piatto"
+    }
+}
+console.log(checkAngle(180));
