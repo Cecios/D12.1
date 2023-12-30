@@ -104,11 +104,25 @@ const countLetter = function(frase){
         occorrenze[carattere] = (occorrenze[carattere] || 0) + 1;
     }
     let c = 0
-    for (let i = 0; i < occorrenze.length; i++) {
-        if (occorrenze[i] >= c) {
-            c = occorrenze[i]
-        }    
-    }
+
     return occorrenze
 }
 console.log(countLetter('ciao mamma'));
+
+//ESERCIZIO 2 EXTRA
+
+console.log("Esercizio 2 EXTRA");
+
+const checkAnagram = function (input1,input2) {
+    const frase1 = input1.toLowerCase().replace(/\s/g, "");
+    const frase2= input2.toLowerCase().replace(/\s/g, "");
+    
+    console.log((frase1.split('').reverse().join('') === frase2));
+
+}
+checkAnagram("i topi non avevAno nipoti","i topi non avevano Nipoti")
+
+//ESERCIZIO 3 EXTRA
+
+console.log("Esercizio 3 EXTRA");
+
